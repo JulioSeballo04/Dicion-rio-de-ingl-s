@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern English Dictionary</title>
+    <link rel="stylesheet" href="dictionary.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="mobile-header">
+    <span style="font-weight: 600; color: var(--primary);">Dictionary App</span>
+    <button class="btn-primary" onclick="toggleSidebar()">☰ Menu</button>
+</div>
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2>Vocabulary</h2>
+        <span class="close-menu" onclick="toggleSidebar()">✕</span>
+    </div>
+    
+    <div class="menu-section">
+        <button class="nav-btn" onclick="showAlphabetMobile()"><span>📖</span> Alphabet</button>
+        <ul id="alphabet"></ul>
+        <button class="nav-btn" style="margin-top: 20px;" onclick="openRules(); toggleSidebar();"><span>⚖️</span> Rules</button>
+    </div>
+</div>
+
+<div class="content">
+    <div class="main-card animate">
+        <button id="backBtn" class="back-Btn" onclick="goHome()" style="display:none;">← Return</button>
+
+        <div id="homeView">
+            <h1 id="title_dictionary">📘 My Dictionary</h1>
+            <p style="color: var(--text-muted)">Tap the menu to select a letter or view the rules.</p>
+            <button class="logout-btn" onclick="logout()">🚪 Sair</button>
+        </div>
+
+        <div id="editorView" style="display:none;">
+            <h2 id="title" style="font-size: 1.2rem;"></h2>
+            
+            <!-- Inputs de palavra -->
+            <div class="input-group" id="wordInputs">
+                <input id="word" placeholder="Word (English)">
+                <input id="meaning" placeholder="Translation (Portuguese)">
+                <!-- ✅ id="saveBtn" para poder desabilitar durante a geração -->
+                <button id="saveBtn" class="btn-primary" onclick="saveWord()">Save</button>
+                <p id="message" style="font-weight: 600; margin-top: 6px;"></p>
+            </div>
+
+            <!-- Inputs de regra -->
+            <div class="input-group" id="ruleInputs" style="display:none;">
+                <input id="ruleTitle" placeholder="Rule title">
+                <input id="ruleDesc" placeholder="Description">
+                <button class="btn-primary" onclick="saveRule()">Save Rule</button>
+            </div>
+
+            <div class="table-container">
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="dictionary.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slider" id="slider">
+
+            <div class="form login">
+                <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/7033146-perfil-icone-login-head-icon-vetor.jpg" class ='login-icon'>
+                <h2 class="title-login">Welcome to your Dictionary</h2>
+                <h3 class="title-login">Please log in to continue</h3>
+                <input id="email" type="email" placeholder="Email" required>
+                <input id="password" type="password" placeholder="Password" required>
+                <button onclick="login()">Login</button>
+                <button onclick="loginGoogle()" class="google-btn">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="google-icon">
+                    Continue with Google
+                </button>
+                <p>Don't have an account? <a href="#" id="goSignup">Sign up</a></p>
+            </div>
+
+            <div class="form signup">
+                <img src="https://cdn-icons-png.flaticon.com/512/6209/6209959.png" class ='signup-icon'>
+                <h2 class="title-signup">Create your account</h2>
+                <input id="firstName" type="text" placeholder="First Name" required>
+                <input id="lastName" type="text" placeholder="Last Name" required>
+                <input id="signupEmail" type="email" placeholder="Email" required>
+                <input id="signupPassword" type="password" placeholder="Password" required>
+                <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+                <input id="phone" type="tel" placeholder="Phone Number">
+                <button onclick="signup()">Create Account</button>
+
+                <p>Already have an account? <a href="#" id="goLogin">Log in</a></p>
+            </div>
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

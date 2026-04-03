@@ -1,0 +1,26 @@
+{
+  "name": "projeto-dicionario",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulioSeballo04/Dicion-rio-de-ingl-s.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulioSeballo04/Dicion-rio-de-ingl-s/issues"
+  },
+  "homepage": "https://github.com/JulioSeballo04/Dicion-rio-de-ingl-s#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1"
+  }
+}
